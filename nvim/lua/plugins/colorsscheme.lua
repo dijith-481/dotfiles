@@ -83,6 +83,7 @@ return {
 			---@param colors Nord.Palette
 			on_highlights = function(highlights, colors)
 				highlights.String.fg = colors.aurora.yellow
+				highlights.LineNr.fg = colors.polar_night.light
 			end,
 		})
 		-- Load the colorscheme here.
