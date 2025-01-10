@@ -1,0 +1,22 @@
+origin	"#2a3630"
+bright"#33483f"
+brighter"#3e5249"
+brightest"#405d4f"
+light"#597668"
+
+#polar storm
+origin"#d3e2da"
+brighter"#e2eae6"
+brightest"#e9f1ec"
+
+#frost 
+polar water"#bbb18d"
+ice"#b1ba8e"
+artic water"#85a98a"
+artic ocean"#568b67"
+green"#c5b381"
+purple"#9697c0"
+red"#af66a0"
+yellow"#ffbca0"
+orange"#ce819b"
+
