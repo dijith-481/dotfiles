@@ -6,7 +6,7 @@ return {
 		require("nord").setup({
 			-- your configuration comes here
 			-- or leave it empty to use the default settings
-			transparent = true, -- Enable this to disable setting the background color
+			transparent = false, -- Enable this to disable setting the background color
 			terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 			diff = { mode = "bg" }, -- enables/disables colorful backgrounds when used in diff mode. values : [bg|fg]
 			borders = true, -- Enable the border between verticaly split windows visible
@@ -59,30 +59,30 @@ return {
 				--colors.frost.ice = "#88D0C0"
 				--colors.frost.artic_water = "#81C1A1"
 				--colors.frost.artic_ocean = "#5EAC81"
-				colors.polar_night.origin = "#2a3630"
-				colors.polar_night.bright = "#33483f"
-				colors.polar_night.brighter = "#3e5249"
-				colors.polar_night.brightest = "#405d4f"
-				colors.polar_night.light = "#597668"
-				colors.snow_storm.origin = "#d3e2da"
-				colors.snow_storm.brighter = "#e2eae6"
-				colors.snow_storm.brightest = "#e9f1ec"
-				colors.frost.polar_water = "#bbb18d"
-				colors.frost.ice = "#b1ba8e"
-				colors.frost.artic_water = "#85a98a"
-				colors.frost.artic_ocean = "#568b67"
-				colors.aurora.green = "#c5b381"
+				colors.polar_night.origin = "#2F4135"
+				colors.polar_night.bright = "#3C5343"
+				colors.polar_night.brighter = "#445F4D"
+				colors.polar_night.brightest = "#4D6A56"
+				colors.polar_night.light = "#96BFA5"
+				colors.snow_storm.origin = "#D8E9DC"
+				colors.snow_storm.brighter = "#E5F0E7"
+				colors.snow_storm.brightest = "#ECF4ED"
+				colors.frost.polar_water = "#9CBC8F"
+				colors.frost.ice = "#8ACF87"
+				colors.frost.artic_water = "#81C190"
+				colors.frost.artic_ocean = "#5DAC74"
+				colors.aurora.green = "#89BFEB"
 				colors.aurora.purple = "#9697c0"
-				colors.aurora.red = "#af66a0"
-				colors.aurora.yellow = "#ffbca0"
-				colors.aurora.orange = "#ce819b"
+				colors.aurora.red = "#BE6068"
+				colors.aurora.yellow = "#EBD689"
+				colors.aurora.orange = "#D19771"
 			end,
 
 			--- You can override specific highlights to use other groups or a hex color
 			--- function will be called with all highlights and the colorScheme table
 			---@param colors Nord.Palette
 			on_highlights = function(highlights, colors)
-				highlights.String.fg = colors.aurora.yellow
+				--highlights.String.fg = colors.aurora.yellow
 				highlights.LineNr.fg = colors.polar_night.light
 			end,
 		})
