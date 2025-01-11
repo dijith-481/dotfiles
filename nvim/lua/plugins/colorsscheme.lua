@@ -45,20 +45,6 @@ return {
 			-- Override the default colors
 			---@param colors Nord.Palette
 			on_colors = function(colors)
-				--colors.polar_night.origin = "#2E4034"
-				--colors.polar_night.bright = "#3B5242"
-				--colors.polar_night.brighter = "#435E4C"
-				--colors.polar_night.brightest = "#4C6A56"
-				--colors.polar_night.light = "#61886E"
-
-				--colors.snow_storm.origin = "#D8E9DE"
-				--colors.snow_storm.brighter = "#E5F0E9"
-				--colors.snow_storm.brightest = "#ECF4EF"
-
-				--colors.frost.polar_water = "#8FBBBC"
-				--colors.frost.ice = "#88D0C0"
-				--colors.frost.artic_water = "#81C1A1"
-				--colors.frost.artic_ocean = "#5EAC81"
 				colors.polar_night.origin = "#2F4135"
 				colors.polar_night.bright = "#3C5343"
 				colors.polar_night.brighter = "#445F4D"
