@@ -6,11 +6,9 @@ return {
 		require("mini.pairs").setup()
 		--around/inside text objects
 		require("mini.ai").setup({ n_lines = 500 })
-		--simple animations
-		require("mini.animate").setup()
 		-- add/delete/replace surrounding (brackets,quotes,etc)
-		require("min.surround").setup()
-		requre("mini.cursorword").setup()
+		require("mini.surround").setup()
+		require("mini.cursorword").setup()
 		require("mini.icons").setup()
 		require("mini.indentscope").setup()
 		--statusline

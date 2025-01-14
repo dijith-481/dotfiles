@@ -15,10 +15,6 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "williamboman/mason.nvim", config = true },
-			"williamboman/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
-
 			{ "j-hui/fidget.nvim", opts = {} },
 			"hrsh7th/cmp-nvim-lsp",
 		},
@@ -72,6 +68,11 @@ return {
 					-- WARN: This is not Goto Definition, this is Goto Declaration.
 					--  For example, in C this would take you to the header.
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+					map("<leader>Di", vim.cmd("Telescope diagnostics bufnr=0"), "Show buffer diagnostics")
+					map("<leader>d", vim.diagnostic.open_float, "Show line diagnostics")
+					map("[d", vim.diagnostic.goto_prev, "Go to previous diagnostic")
+					map("]d", vim.diagnostic.goto_next, "Go to next diagnostic")
+					map("K", vim.lsp.buf.hover, "Show documentation for what is under cursor")
 
 					-- The following two autocommands are used to highlight references of the
 					-- word under your cursor when your cursor rests there for a little while.
@@ -128,8 +129,21 @@ return {
 
 			local servers = {
 				clangd = {},
-				html = { filetypes = { "html" } },
+				-- html = { filetypes = { "html" } },
 				angularls = {},
+				emmet_ls = {
+					capabilities = capabilities,
+					filetypes = {
+						"html",
+						"typescriptreact",
+						"javascriptreact",
+						"css",
+						"sass",
+						"scss",
+						"less",
+						"svelte",
+					},
+				},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes { ...},
@@ -156,66 +170,66 @@ return {
 						},
 					},
 				},
-				pylsp = {
+				-- pylsp = {
+				-- 	settings = {
+				-- 		pylsp = {
+				-- 			plugins = {
+				-- 				pyflakes = { enabled = true },
+				-- 				pycodestyle = { enabled = true },
+				-- 				autopep8 = { enabled = true },
+				-- 				yapf = { enabled = false },
+				-- 				mccabe = { enabled = false },
+				-- 				pylsp_mypy = { enabled = false },
+				-- 				pylsp_black = { enabled = true },
+				-- 				pylsp_isort = { enabled = true },
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
+				basedpyright = {
+					-- Config options: https://github.com/DetachHead/basedpyright/blob/main/docs/settings.md
 					settings = {
-						pylsp = {
-							plugins = {
-								pyflakes = { enabled = true },
-								pycodestyle = { enabled = true },
-								autopep8 = { enabled = true },
-								yapf = { enabled = false },
-								mccabe = { enabled = false },
-								pylsp_mypy = { enabled = false },
-								pylsp_black = { enabled = true },
-								pylsp_isort = { enabled = true },
+						basedpyright = {
+							disableOrganizeImports = false, -- Using Ruff's import organizer
+							disableLanguageServices = false,
+							analysis = {
+								ignore = { "*" }, -- Ignore all files for analysis to exclusively use Ruff for linting
+								typeCheckingMode = "off",
+								diagnosticMode = "openFilesOnly", -- Only analyze open files
+								useLibraryCodeForTypes = true,
+								autoImportCompletions = true, -- whether pyright offers auto-import completions
 							},
 						},
 					},
 				},
-				-- basedpyright = {
-				--   -- Config options: https://github.com/DetachHead/basedpyright/blob/main/docs/settings.md
-				--   settings = {
-				--     basedpyright = {
-				--       disableOrganizeImports = true, -- Using Ruff's import organizer
-				--       disableLanguageServices = false,
-				--       analysis = {
-				--         ignore = { '*' },                 -- Ignore all files for analysis to exclusively use Ruff for linting
-				--         typeCheckingMode = 'off',
-				--         diagnosticMode = 'openFilesOnly', -- Only analyze open files
-				--         useLibraryCodeForTypes = true,
-				--         autoImportCompletions = true,     -- whether pyright offers auto-import completions
-				--       },
-				--     },
-				--   },
+				-- ruff = {
+				-- 	-- Notes on code actions: https://github.com/astral-sh/ruff-lsp/issues/119#issuecomment-1595628355
+				-- 	-- Get isort like behavior: https://github.com/astral-sh/ruff/issues/8926#issuecomment-1834048218
+				-- 	commands = {
+				-- 		RuffAutofix = {
+				-- 			function()
+				-- 				vim.lsp.buf.execute_command({
+				-- 					command = "ruff.applyAutofix",
+				-- 					arguments = {
+				-- 						{ uri = vim.uri_from_bufnr(0) },
+				-- 					},
+				-- 				})
+				-- 			end,
+				-- 			description = "Ruff: Fix all auto-fixable problems",
+				-- 		},
+				-- 		RuffOrganizeImports = {
+				-- 			function()
+				-- 				vim.lsp.buf.execute_command({
+				-- 					command = "ruff.applyOrganizeImports",
+				-- 					arguments = {
+				-- 						{ uri = vim.uri_from_bufnr(0) },
+				-- 					},
+				-- 				})
+				-- 			end,
+				-- 			description = "Ruff: Format imports",
+				-- 		},
+				-- 	},
 				-- },
-				ruff = {
-					-- Notes on code actions: https://github.com/astral-sh/ruff-lsp/issues/119#issuecomment-1595628355
-					-- Get isort like behavior: https://github.com/astral-sh/ruff/issues/8926#issuecomment-1834048218
-					commands = {
-						RuffAutofix = {
-							function()
-								vim.lsp.buf.execute_command({
-									command = "ruff.applyAutofix",
-									arguments = {
-										{ uri = vim.uri_from_bufnr(0) },
-									},
-								})
-							end,
-							description = "Ruff: Fix all auto-fixable problems",
-						},
-						RuffOrganizeImports = {
-							function()
-								vim.lsp.buf.execute_command({
-									command = "ruff.applyOrganizeImports",
-									arguments = {
-										{ uri = vim.uri_from_bufnr(0) },
-									},
-								})
-							end,
-							description = "Ruff: Format imports",
-						},
-					},
-				},
 				rust_analyzer = {
 					["rust-analyzer"] = {
 						cargo = {
@@ -230,30 +244,8 @@ return {
 				ts_ls = {},
 				tailwindcss = {},
 				jsonls = {},
-				cssls = {},
+				-- cssls = {},
 			}
-			require("mason").setup()
-
-			-- You can add other tools here that you want Mason to install
-			-- for you, so that they are available from within Neovim.
-			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
-			})
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for ts_ls)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
-			})
 		end,
 	},
 }
