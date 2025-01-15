@@ -23,6 +23,8 @@ return {
 
 		local lspkind = require("lspkind")
 
+		require("clangd_extensions.cmp_scores")
+
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 

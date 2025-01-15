@@ -8,6 +8,9 @@ return {
 	config = function()
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
+		vim.filetype.add({
+			pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+		})
 
 		-- configure treesitter
 		treesitter.setup({ -- enable syntax highlighting
@@ -43,6 +46,8 @@ return {
 				"query",
 				"vimdoc",
 				"c",
+				"cpp",
+				"hyprlang",
 			},
 			incremental_selection = {
 				enable = true,

@@ -57,3 +57,6 @@ vim.opt.scrolloff = 10
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
+
+--termgui colors
+vim.o.termguicolors = true

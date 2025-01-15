@@ -3,7 +3,7 @@ return {
 	version = false,
 	config = function()
 		--autopairs
-		require("mini.pairs").setup()
+		-- require("mini.pairs").setup()
 		--around/inside text objects
 		require("mini.ai").setup({ n_lines = 500 })
 		-- add/delete/replace surrounding (brackets,quotes,etc)
