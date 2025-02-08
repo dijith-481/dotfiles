@@ -11,7 +11,12 @@ set -g fish_greeting
 
 starship init fish | source
 zoxide init fish | source
-# alias cd="z"
+fzf --fish |source
+# ng completion script | source
 
 
+
+
+thefuck --alias | source
+alias fk=fuck
 

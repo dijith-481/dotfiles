@@ -1,65 +1,21 @@
-colors.polar_night.origin = "#2F4135"
-colors.polar_night.bright = "#3C5343"
-colors.polar_night.brighter = "#445F4D"
-colors.polar_night.brightest = "#4D6A56"
-colors.snow_storm.origin = "#D8E9DC"
-colors.snow_storm.brighter = "#E5F0E7"
-colors.snow_storm.brightest = "#ECF4ED"
-colors.frost.polar_water = "#9CBC8F"
-colors.frost.ice = "#8ACF87"
-colors.frost.artic_water = "#81C190"
-colors.frost.artic_ocean = "#5DAC74"
-colors.aurora.blue = "#89BFEB"
-colors.aurora.purple = "#9697c0"
-colors.aurora.red = "#BE6068"
-colors.aurora.yellow = "#EBD689"
-colors.aurora.orange = "#D19771"
-colors.polar_night.light = "#75927E"
-colors.snow_storm.dark = "#96BFA5"
-colors.snow_storm.light = "#F4F9F5"
-colors.polar_night.light = "#96BFA5"
-#babb9b #bfcd93 #a3be8c
-#85a86b
-#8fbcbb
-#88c0d0
-#81a1c1
-
-
-#2F4135
-#3C5343
-#445F4D
-#4D6A56
-#3b4337
-#495445
-#54604d
-#5e6b57
-#d8e9dd
 #2e3440
 #3b4252
 #434c5e
 #4c566a
+#d8dee9
+#e5e9f0
+#eceff4
+#8fbcbb
+#88c0d0
+#81a1c1
+#5e81ac
+#bf616a
+#d08770
+#ebcb8b
+#a3be8c
+#b48ead
 
 
-
-
---nord0: #2F4135;
---nord1: #3C5343;
---nord2: #445F4D;
---nord3: #4D6A56;
---nord4: #D8E9DC;
---nord5: #E5F0E7;
---nord6: #ECF4ED;
---nord7: #9CBC8F;
---nord8: #8ACF87;
---nord9: #81C190;
---nord10: #5DAC74;
---nord11: #89BFEB;
---nord12: #9697c0;
---nord13: #BE6068;
---nord14: #EBD689;
---nord15: #D19771;
---nord3-4: #96BFA5;
-@mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #8acf87; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #d8e9dc; @subtext1: #e5f0e7; @subtext0: #ecf4ed; @overlay2: #5dac74; @overlay1: #81c190; @overlay0: #8acf87; @surface2: #4d6a56; @surface1: #445f4d; @surface0: #3c5343; @base: #2f4135; @mantle: #182518; @crust: #111b11; };
    @mocha: {
         @rosewater: #f0d8d8;
         @flamingo: #e5bcbc;

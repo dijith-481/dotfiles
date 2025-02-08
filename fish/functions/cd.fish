@@ -9,3 +9,22 @@ function cd
         end
     end
 end
+function ..
+    cd ..
+end
+
+function ...
+    cd ../..
+end
+
+function ....
+    cd ../../..
+end
+
+function .....
+    cd ../../../..
+end
+
+function ......
+    cd ../../../../..
+end
