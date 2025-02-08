@@ -2,10 +2,22 @@
   "layer": "top",
   "position": "top",
   "reload_style_on_change": true,
-  "modules-left": ["custom/notification", "clock", "custom/pacman", "tray"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["group/expand", "bluetooth", "network", "battery"],
-
+  "modules-left": [
+    "custom/notification",
+    "clock",
+    "custom/pacman",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "mpris",
+    "group/expand",
+    "bluetooth",
+    "network",
+    "battery"
+  ],
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -14,7 +26,13 @@
       "empty": ""
     },
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5]
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     }
   },
   "custom/notification": {
@@ -69,7 +87,14 @@
     "format-charging": "{capacity}% 󰂄",
     "format-plugged": "{capacity}% 󰂄 ",
     "format-alt": "{time} {icon}",
-    "format-icons": ["󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
   },
   "custom/pacman": {
     "format": "󰅢 {}",
@@ -126,5 +151,17 @@
   "tray": {
     "icon-size": 14,
     "spacing": 10
+  },
+  "mpris": {
+    "format": "{artist} {title}",
+    "format-paused": "{dynamic}",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    // "ignored-players": ["firefox"]
   }
 }

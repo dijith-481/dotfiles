@@ -18,9 +18,7 @@ colors.polar_night.light = "#75927E"
 colors.snow_storm.dark = "#96BFA5"
 colors.snow_storm.light = "#F4F9F5"
 colors.polar_night.light = "#96BFA5"
-#babb9b
-#bfcd93
-#a3be8c
+#babb9b #bfcd93 #a3be8c
 #85a86b
 #8fbcbb
 #88c0d0
@@ -71,23 +69,23 @@ colors.polar_night.light = "#96BFA5"
         @maroon: #eba0ac;
         @peach: #D19771;
         @yellow: #EBD689;
-        @green: #8ACF87;
+        @green: #81a1c1;
         @teal: #87cfc5;
         @sky: #87c5cf;
         @sapphire: #87bbcf;
         @blue: #89BFEB;
         @lavender: #9697c0;
-        @text: #d8e9dc;
-        @subtext1: #b9d5c2;
-        @subtext0: #a6c9b2;
-        @overlay2: #86b696;
-        @overlay1: #70a983;
-        @overlay0: #58936c;
-        @surface2: #507c5f;
-        @surface1: #3c5d47;
-        @surface0: #293d30;
-        @base: #1d2520;
-        @mantle: #191f1b;
-        @crust: #111311;
+        @text: #eceff4;
+        @subtext1: #e5e9f0;
+        @subtext0: #d8dee9;
+        @overlay2: #8894a8;
+        @overlay1: #69778e;
+        @overlay0: #4c566a;
+        @surface2: #434c5e;
+        @surface1: #3b4252;
+        @surface0: #2e3440;
+        @base: #22262f;
+        @mantle: #181822;
+        @crust: #111113;
     }
     ;

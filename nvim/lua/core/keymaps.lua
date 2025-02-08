@@ -9,7 +9,7 @@ keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- increment/decrement numbers
---keymap.set("n", "<leader>ii", "<C-a>", { desc = "Increment number" }) -- increment
+keymap.set("n", "<C-s>", "<C-a>", { desc = "Increment number" }) -- increment
 --keymap.set("n", "<leader>id", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window management

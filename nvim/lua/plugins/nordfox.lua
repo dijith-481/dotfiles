@@ -6,12 +6,12 @@ return {
 			palettes = {
 				-- Custom duskfox with black background
 				nordfox = {
-					red = "#bf616a",
-					orange = "#d08770",
-					yellow = "#ebcb8b",
-					green = "#a3be8c",
-					pink = "#b48ead",
-					cyan = "#a3be8c",
+					-- red = "#bf616a",
+					-- orange = "#d08770",
+					-- yellow = "#ebcb8b",
+					-- green = "#a3be8c",
+					-- pink = "#b48ead",
+					-- cyan = "#a3be8c",
 				},
 			},
 		})
