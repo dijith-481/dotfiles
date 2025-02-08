@@ -8,13 +8,10 @@ if status  is-login
     end
 end
 set -g fish_greeting
-set -Ux  PATH $PATH ~/go/bin
-set -Ux  PATH $PATH ~/usr/local/go/bin
-set -Ux  PATH $PATH ~/.local/share/gem/ruby/3.3.0/bin/
 
 starship init fish | source
 zoxide init fish | source
-alias cd="z"
+# alias cd="z"
 
 
 
