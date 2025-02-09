@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    set -g fish_key_bindings fish_vi_key_bindings
+    # set -g fish_key_bindings fish_vi_key_bindings
 end
 if status  is-login
     if test (tty) = /dev/tty1
@@ -19,4 +19,5 @@ fzf --fish |source
 
 thefuck --alias | source
 alias fk=fuck
+fastfetch
 
