@@ -1,10 +1,11 @@
 #!/bin/bash                                                       
-wallpapers=("$HOME/Images/wallpapers/static/"*)   # Create array of file paths
+wallpapers=("$HOME/Images/wallpapers/live/"*)   # Create array of file paths
 if [ ${#wallpapers[@]} -gt 0 ]; then # Check if any wallpapers found
 	random_index=$((RANDOM % ${#wallpapers[@]}))
 	wallpaper="${wallpapers[$random_index]}"
 	tempfile=".cache/currwallpaper.png"
-	cp "$wallpaper" "$tempfile"
+	echo "$wallpaper"
+	ffmpeg -y -i "$wallpaper" -vframes 1 "$tempfile" 
 
 else
 	echo "Error: No wallpapers found in $HOME/wallpapers/" >&2

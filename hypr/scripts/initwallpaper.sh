@@ -1,3 +1,2 @@
 #!/bin/bash
-sleep 1
-exec ./wallpaper.sh
+sleep 1  && exec swww restore 

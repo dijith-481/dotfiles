@@ -7,7 +7,8 @@ if [[ !  -f "$selected" && ! "$selected" =~ ^(http|https|ftp):// ]]; then
 	selected=$(cat "$tempfile" ) 
 	rm -f "$tempfile"
 fi
+
 if [[ ! -z "$selected" ]]; then
-	kdeconnect-handler $selected
+	kdeconnect-cli -d 0ed77826_cc71_435d_9dcf_b01036c192ba --share $selected
 fi
 #
