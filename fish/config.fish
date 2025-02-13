@@ -19,5 +19,5 @@ fzf --fish |source
 
 thefuck --alias | source
 alias fk=fuck
-fastfetch
+# fastfetch
 
