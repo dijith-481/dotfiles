@@ -3,19 +3,19 @@
   "position": "top",
   "reload_style_on_change": true,
   "modules-left": [
-    "custom/notification",
-    "clock",
-    "custom/pacman",
+    // "custom/notification",
+    // "custom/pacman",
+    "hyprland/workspaces",
     "tray"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "mpris"
   ],
   "modules-right": [
-    "mpris",
     "group/expand",
     "bluetooth",
     "network",
+    "clock",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -42,8 +42,9 @@
     "escape": true
   },
   "clock": {
-    "format": "{:%I:%M:%S %p} ",
-    "interval": 1,
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a, %b %d, %Y %R}",
+    "interval": 60,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "format": {
@@ -57,12 +58,12 @@
   },
   "network": {
     "format-wifi": "",
-    "format-ethernet": "",
-    "format-disconnected": "",
+    "format-ethernet": "󰛳",
+    "format-disconnected": "",
     "tooltip-format-disconnected": "Error",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} 🖧 ",
-    "on-click": "kitty nmtui"
+    "on-click": "foot nmtui"
   },
   "bluetooth": {
     "format-on": "󰂯",
@@ -79,13 +80,14 @@
   "battery": {
     "interval": 30,
     "states": {
-      "good": 95,
+      "good": 75,
       "warning": 30,
       "critical": 20
     },
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󰂄",
-    "format-plugged": "{capacity}% 󰂄 ",
+    "format-plugged": "󰚥",
+    "tooltip-format": "{capacity}% {power}󱐋 {timeTo} {cycles}󰤁 {health}󱈑 ",
     "format-alt": "{time} {icon}",
     "format-icons": [
       "󰁻",
@@ -154,14 +156,17 @@
   },
   "mpris": {
     "format": "{artist} {title}",
-    "format-paused": "{dynamic}",
+    "format-paused": " {artist} {title}",
+    // "on-click": "~/.config/waybar/scripts/music.sh",
     "player-icons": {
       "default": "▶",
       "mpv": "🎵"
     },
     "status-icons": {
       "paused": "⏸"
-    },
-    // "ignored-players": ["firefox"]
+    }
+    // "ignored-players": [
+    // "firefox"
+    // ]
   }
 }
