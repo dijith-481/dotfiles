@@ -16,9 +16,9 @@
 
 window {
   border: 3px solid;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: @background;
-  border-color: @foreground;
+  border-color: @nord3;
 }
 #inner-box {
   /* padding: 10px; */
@@ -84,7 +84,7 @@ window {
 }
 #entry:selected #text {
   background-color: transparent;
-  color: @nord0;
+  color: @nord4;
 }
 
 #entry:selected image {

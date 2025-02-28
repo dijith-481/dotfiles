@@ -1,5 +1,5 @@
 [config]
-allow_images=true
+allow_images=false
 width=700
 show=drun
 prompt=Search

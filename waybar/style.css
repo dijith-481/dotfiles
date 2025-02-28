@@ -17,8 +17,9 @@ window#waybar {
 #backlight:hover,
 #mpris:hover,
 #battery:hover,
+#tray:hover,
 #wireplumber:hover {
-  background-color: @nord1;
+  background-color: @nord3;
 }
 .modules-left {
 }
@@ -41,7 +42,7 @@ tooltip {
   margin: 4px 2px;
   padding: 2px 4px;
   border-radius: 3px;
-  background-color: @nord3;
+  background-color: @nord0;
   color: @color7;
   transition: all 0.3s ease;
 }
