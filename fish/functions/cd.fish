@@ -1,5 +1,5 @@
 # function cd
-    # z $argv && ls
+# z $argv && ls
 # end
 function cd
     if z $argv

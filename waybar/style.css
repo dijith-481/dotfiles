@@ -53,8 +53,8 @@ tooltip {
   color: @nord4;
 }
 #workspaces {
-  padding: 2px 16px;
-  background-color: @nord0;
+  padding: 2px 4px;
+  background-color: transparent;
   /* margin-left: 4px; */
 }
 #workspaces button {

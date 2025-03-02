@@ -18,12 +18,25 @@ fzf --fish | source
 
 
 thefuck --alias | source
-alias fk=fuck
-ff
 # fastfetch
+ff
 
+function ll
+    ls -al $argv
+end
+function la
+    ls -a $argv
+end
+
+
+function vi
+    nvim $argv
+end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+#go
+set --export PATH $HOME/go/bin $PATH
 vars
