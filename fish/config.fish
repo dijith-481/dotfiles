@@ -14,20 +14,17 @@ zoxide init fish | source
 fzf --fish | source
 # ng completion script | source
 
-
-
-
 thefuck --alias | source
 # fastfetch
 ff
 
+bind -M insert ctrl-y accept-autosuggestion
 function ll
     ls -al $argv
 end
 function la
     ls -a $argv
 end
-
 
 function vi
     nvim $argv
