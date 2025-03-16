@@ -11,16 +11,14 @@ window#waybar {
   all: unset;
   background-color: @background;
 }
-#clock:hover,
-#bluetooth:hover,
-#network:hover,
-#backlight:hover,
-#mpris:hover,
-#battery:hover,
-#tray:hover,
-#wireplumber:hover {
-  background-color: @nord3;
-}
+/* #clock:hover, */
+/* #bluetooth:hover, */
+/* #network:hover, */
+/* #backlight:hover, */
+/* #battery:hover, */
+/* #tray:hover { */
+/* background-color: @nord3; */
+/* } */
 .modules-left {
 }
 .modules-center {
@@ -48,9 +46,8 @@ tooltip {
 }
 #mpris {
   margin: 0 2px;
-  padding: 2px 16px;
-  border-radius: 3px;
-  color: @nord4;
+  font-weight: 800;
+  color: @nord9;
 }
 #workspaces {
   padding: 2px 4px;
@@ -85,13 +82,14 @@ tooltip {
   border: none;
 }
 #bluetooth {
+  color: @nord4;
 }
 #wireplumber.muted {
   background-color: @nord11;
 }
 #wireplumber {
-  background-color: @nord9;
-  color: @nord1;
+  /* background-color: @nord9; */
+  color: @nord4;
 }
 #bluetooth.connected {
   color: @nord1;

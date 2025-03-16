@@ -4,6 +4,7 @@
   "reload_style_on_change": true,
   "modules-left": [
     "hyprland/workspaces"
+    // "custom/dnd"
   ],
   "modules-center": [
     "mpris"
@@ -12,9 +13,9 @@
     "tray",
     "clock",
     "backlight",
+    "wireplumber",
     "bluetooth",
     "network",
-    "wireplumber",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -114,9 +115,25 @@
     ]
   },
   "mpris": {
-    "format": "{artist} {title}",
+    "format": "{artist} | {title}",
     "format-paused": " {artist} {title}",
-    "tooltip-format": "{dynamic}"
-  }
+"on-click-right":"playerctld shift",
+    "tooltip-format": "{album}|{player}"
+  },
+  "custom/dnd": {
+    "exec": "dunstctl is-paused | jq --unbuffered --compact-output '{alt: ., class: .}'",
+    "return-type": "json",
+    "interval": "once",
+    "on-click": "dunstctl set-paused toggle && sleep 5",
+    "exec-on-event": true,
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "true": " ",
+      "false": "󰪑 ",
+      "default": "󱙏 "
+    },
+
+  },
 }
 }
