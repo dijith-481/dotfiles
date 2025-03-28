@@ -34,8 +34,7 @@
       ]
     }
   },
-  "wireplumber": {
-    "format": "{volume}% {icon} ",
+  "wireplumber": { "format": "{volume}% {icon} ",
     "format-muted": "  ",
     "on-click": "helvum",
     "max-volume": 150,
@@ -76,7 +75,7 @@
     "format-on": " 󰂯 ",
     "format-off": "BT-off",
     "format-disabled": " 󰂲 ",
-    "format-connected": "{device_battery_percentage}% 󰂱 ",
+    "format-connected": "󰂱 ",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
@@ -103,7 +102,7 @@
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󰂄",
     "format-plugged": " 󰚥 ",
-    "tooltip-format": "{capacity}% {power}󱐋 {timeTo} {cycles}󰤁 {health}󱈑 ",
+    "tooltip-format": "{capacity}% {power} 󱐋 {timeTo} {cycles} 󰤁 {health} 󱈑 ",
     "format-alt": "{time} {icon}",
     "format-icons": [
       "󰁻",
@@ -115,8 +114,14 @@
     ]
   },
   "mpris": {
-    "format": "{artist} | {title}",
+    "format": "{player_icon}{artist} | {title}",
+"player-icons": {
+      "kdeconnect": " ",
+      "brave": " ",
+      "default": "",
+    },
     "format-paused": " {artist} {title}",
+
 "on-click-right":"playerctld shift",
     "tooltip-format": "{album}|{player}"
   },
