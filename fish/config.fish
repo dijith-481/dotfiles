@@ -36,4 +36,4 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 #go
 set --export PATH $HOME/go/bin $PATH
-vars
+# vars
