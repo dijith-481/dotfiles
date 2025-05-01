@@ -36,4 +36,10 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 #go
 set --export PATH $HOME/go/bin $PATH
+# set -gx JAVA_HOME /opt/android-studio/jbr
+set --export JAVA_HOME /opt/android-studio/jbr
+set --export ANDROID_HOME ~/Android/Sdk/
+set --export ANDROID_NDK_HOME ~/Android/Sdk/ndk/29.0.13113456/
+set --export PATH ~/Android/Sdk/emulator/ $PATH
+fish_add_path -g -p ~/development/flutter/bin
 # vars
