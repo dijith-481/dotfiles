@@ -1,2 +1,2 @@
 #!/bin/bash
-nvim +ObsidianToday
+nvim mdToday

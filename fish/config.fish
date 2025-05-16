@@ -3,6 +3,10 @@ if status is-interactive
     # set -g fish_key_bindings fish_vi_key_bindings
 end
 if status is-login
+    if test (tty) = /dev/tty2
+        niri --session &>/dev/null
+    end
+
     if test (tty) = /dev/tty1
         hyprland &>/dev/null
     end

@@ -22,5 +22,4 @@ if [[ $1 == "up" ]]; then
   brightnessctl s +$step
 else
   brightnessctl s $step-
-
 fi
