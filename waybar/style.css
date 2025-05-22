@@ -31,6 +31,7 @@ tooltip {
 }
 #clock,
 #bluetooth,
+#custom-dunst,
 #network,
 #backlight,
 #battery,
@@ -44,11 +45,14 @@ tooltip {
   color: @color7;
   transition: all 0.3s ease;
 }
+
 #mpris {
   margin: 0 2px;
   font-weight: 800;
   color: @nord9;
 }
+
+#custom-niri-taskbar,
 #workspaces {
   padding: 2px 4px;
   background-color: transparent;

@@ -5,11 +5,14 @@
   "modules-left": [
     "hyprland/workspaces",
 "niri/workspaces",
+"custom/niri-taskbar"
+    // "wlr/taskbar"
   ],
   "modules-center": [
     "mpris"
   ],
   "modules-right": [
+    "custom/dunst",
     "tray",
     "clock",
     "backlight",
@@ -23,12 +26,12 @@
 	"format-icons": {
 		// Named workspaces
 		// (you need to configure them in niri)
-		"browser": "",
-		"discord": "",
-		"chat": "<b></b>",
+		"browser": "󰈹",
+		"ytmusic": "󱖏",
+		"nvim": "<b></b>",
 
 		// Icons by state
-		"active": "",
+		"active": "",
 		"default": ""
 	}
 },
@@ -154,5 +157,34 @@
     },
 
   },
-}
+"wlr/taskbar": {
+    "format": "{title}",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "all-outputs": "false",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+"^.*nvim.*$":""
+    }
+},
+"custom/dunst": {
+    "exec": "~/.config/waybar/scripts/dunst.sh",
+    "on-click": "dunstctl set-paused toggle",
+   "restart-interval": 1,
+},
+ "custom/niri-taskbar": {
+    "exec": "~/taskbar/target/release/taskbar",
+    "return-type": "json",
+        "format": "{text}",
+    "tooltip-format": "{}",
+        "tooltip": true,
+        "escape": false,
+        "max-length": 300
+  }
 }
