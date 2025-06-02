@@ -23,7 +23,7 @@ input {
     }
 
     mouse {
-        natural-scroll
+        // natural-scroll
         accel-speed 0.2
     }
 
@@ -192,7 +192,6 @@ layer-rule {
     match namespace="waybar"
     match at-startup=true
     opacity 0.8
-    block-out-from "screencast"
 
     shadow {
         on
@@ -336,6 +335,10 @@ binds {
     Mod+TouchpadScrollDown cooldown-ms=200 { focus-workspace-down; }
 
     // volume and brightness
+    XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"  ; }
+    XF86AudioPause allow-when-locked=true { spawn "playerctl" "play-pause"  ; }
+    XF86AudioPrev allow-when-locked=true { spawn "playerctl" "next"  ; }
+    XF86AudioNext allow-when-locked=true { spawn "playerctl" "previous"  ; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
@@ -384,6 +387,10 @@ binds {
     Mod+XF86Favorites { screenshot-screen ; }
     Mod+Control+XF86Favorites { screenshot; }
     Mod+Shift+XF86Favorites { screenshot-window; }
+    Mod+Alt+XF86Favorites { spawn "sh" "-c" "pkill wf-recorder || wf-recorder \\
+        --geometry \"$(slurp)\" \\
+        -f ~/Downloads/screenshots/record_$(date +%Y%m%d_%H%M%S)_wf.mkv";
+    }
     XF86Favorites repeat=false { spawn "~/.config/hypr/scripts/screenshot.sh" "region" "--clipboard-only"; }
     // Mod+Shift+p repeat=false { spawn "~/.config/hypr/scripts/screenshot.sh" "window"; }
     // Mod+Control+p repeat=false { spawn "~/.config/hypr/scripts/screenshot.sh" "region"; }
@@ -408,8 +415,8 @@ binds {
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-or-workspace-down; }
-    Mod+K     { focus-window-or-workspace-up;}
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up;}
     Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
