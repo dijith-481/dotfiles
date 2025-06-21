@@ -1,0 +1,63 @@
+theme ="nord"
+
+[editor]
+line-number = "relative"
+cursorline  = true
+continue-comments =false
+completion-timeout = 5
+completion-trigger-len=1
+bufferline = "multiple"
+popup-border = "all"
+end-of-line-diagnostics = "hint"
+
+
+[editor.statusline]
+left = ["mode", "spinner","version-control","register"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints =false 
+
+
+#[editor.whitespace]
+#render = "all"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+
+[editor.indent-guides]
+render = true
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable =true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.inline-diagnostics]
+cursor-line ="warning"
+
+

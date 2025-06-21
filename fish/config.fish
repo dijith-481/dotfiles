@@ -38,8 +38,10 @@ end
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+set --export PATH $HOME/.local/share/nvim/mason/bin $PATH
 #go
 set --export PATH $HOME/go/bin $PATH
+set --export PATH $HOME/.local/bin $PATH
 # set -gx JAVA_HOME /opt/android-studio/jbr
 set --export JAVA_HOME /opt/android-studio/jbr
 set --export ANDROID_HOME ~/Android/Sdk/
