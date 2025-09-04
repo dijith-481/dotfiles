@@ -1,0 +1,9 @@
+# This file is used to ignore files when symlinking
+.git*
+README.md
+LICENSE
+arch
+stylus*
+colors
+assets
+css

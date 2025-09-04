@@ -6,15 +6,15 @@ This contains my **Arch** Linux dots for a minimal Hyprland setup using Nord Col
 
 ## Applications
 
-- WindowManager:HYPRLAND
+- WindowManager:Niri
 - Shell:FISH
 - Terminal:Foot
 - Prompt:starship
-- Font: MesloLGS Nerd Font
+- Font: Iosevka
 - Theme:Nord
-- Cursor:Catppuccin-mocha
+- Cursor:Oreo Nord
 - TextEditor:NeoVim
-- dmenu:wofi
+- dmenu:fuzzel
 - Browser:Zen
 - PDFViewer:Zathura
 - FileExplorer:Yazi

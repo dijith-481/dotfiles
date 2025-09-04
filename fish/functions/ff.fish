@@ -9,5 +9,9 @@ function ff
             # else if test $width -ge 30 -a $height -ge  10 
             # eval fastfetch -c ~/.config/fastfetch/small.jsonc
         end
+    else if test $term = ghostty
+        if test $width -ge 70 -a $height -ge 8
+            eval fastfetch -c ~/.config/fastfetch/ghostty.jsonc
+        end
     end
 end

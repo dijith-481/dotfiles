@@ -16,6 +16,7 @@ set -g fish_greeting
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
+kdlfmt completions fish | source
 # ng completion script | source
 
 thefuck --alias | source
@@ -47,5 +48,6 @@ set --export JAVA_HOME /opt/android-studio/jbr
 set --export ANDROID_HOME ~/Android/Sdk/
 set --export ANDROID_NDK_HOME ~/Android/Sdk/ndk/29.0.13113456/
 set --export PATH ~/Android/Sdk/emulator/ $PATH
+set --export PATH $HOME/.pub-cache/bin $PATH
 fish_add_path -g -p ~/development/flutter/bin
 # vars
