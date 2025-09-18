@@ -35,6 +35,10 @@ function vi
     nvim $argv
 end
 
+function hx
+    helix $argv
+end
+
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH

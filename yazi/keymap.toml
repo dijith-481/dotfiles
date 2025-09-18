@@ -1,0 +1,4 @@
+[mgr]
+prepend_keymap = [
+    { on = "<C-y>", run = ["plugin system-clipboard"], desc = "Yank image and copy it to clipboard" }
+]

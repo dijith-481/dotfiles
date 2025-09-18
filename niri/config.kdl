@@ -218,6 +218,16 @@ window-rule {
     default-floating-position x=600 y=0 relative-to="top-left"
 }
 window-rule {
+    match title="fzf-picker"
+    open-floating true
+    default-column-width {
+        fixed 600
+    }
+    default-window-height {
+        fixed 600
+    }
+}
+window-rule {
     // match app-id=r#"^yazi$"#
     match title=".*md$"
  // open-floating true
@@ -469,6 +479,9 @@ binds {
     }
     Mod+Control+f repeat=false {
         spawn "~/.config/hypr/scripts/kde-fileshare.sh"
+    }
+    Mod+Control+c repeat=false {
+        spawn "~/.config/hypr/scripts/copy-file.sh"
     }
     Mod+z repeat=false {
         spawn "foot" "nvim"
