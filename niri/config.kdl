@@ -483,6 +483,9 @@ binds {
     Mod+Control+c repeat=false {
         spawn "~/.config/hypr/scripts/copy-file.sh"
     }
+    Mod+Control+Shift+c repeat=false {
+        spawn "~/.config/hypr/scripts/rip-drag.sh"
+    }
     Mod+z repeat=false {
         spawn "foot" "nvim"
     }
