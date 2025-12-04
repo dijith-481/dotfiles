@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 wallpapers=("$HOME/Images/wallpapers/live/"*) # Create array of file paths
 if [ ${#wallpapers[@]} -gt 0 ]; then          # Check if any wallpapers found
   random_index=$((RANDOM % ${#wallpapers[@]}))

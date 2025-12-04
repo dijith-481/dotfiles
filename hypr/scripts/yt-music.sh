@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if hyprctl clients | grep -q "music.youtube.com"; then
   hyprctl dispatch workspace 11
 

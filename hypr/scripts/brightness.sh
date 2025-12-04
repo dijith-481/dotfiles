@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 c=$(brightnessctl g)
 step=0
 if [[ c -lt 4 ]]; then

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if hyprctl activeworkspace | grep -q "workspace ID 2"; then
   foot -T nvim nvim
 else

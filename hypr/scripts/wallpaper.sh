@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 wallpapers=("$HOME/Images/wallpapers/static/"*) # Create array of file paths
 if [ ${#wallpapers[@]} -gt 0 ]; then            # Check if any wallpapers found
   random_index=$((RANDOM % ${#wallpapers[@]}))
   wallpaper="${wallpapers[$random_index]}"
-  tempfile=".cache/currwallpaper.png"
+  tempfile="$HOME/.cache/currwallpaper.png"
   cp "$wallpaper" "$tempfile"
 
 else

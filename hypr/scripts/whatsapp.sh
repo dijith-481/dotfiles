@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/usr/bin/env bash
 if hyprctl activeworkspace | grep -q "workspace ID 14" ; then
 	    brave --app=https://web.whatsapp.com
 else

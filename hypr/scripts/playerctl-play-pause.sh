@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 players=($(playerctl -l))
 current_player="${players[0]}"
 is_other_player_playing=false

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if hyprctl activeworkspace | grep -q "workspace ID 3"; then
   hyprctl dispatch exec zen-browser
 else

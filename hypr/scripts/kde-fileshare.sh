@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 header=$(clipse -p | head -c 8 | xxd -p)
 if [[ "$header" == "89504e470d0a1a0a" ]]; then
   tempfile=$(mktemp --suffix .png)
