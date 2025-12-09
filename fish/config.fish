@@ -12,7 +12,6 @@ if status is-login
     end
 end
 set -g fish_greeting
-
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
@@ -35,9 +34,9 @@ function vi
     nvim $argv
 end
 
-function hx
-    helix $argv
-end
+#function hx
+#    helix $argv
+#end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -55,3 +54,6 @@ set --export PATH ~/Android/Sdk/emulator/ $PATH
 set --export PATH $HOME/.pub-cache/bin $PATH
 fish_add_path -g -p ~/development/flutter/bin
 # vars
+set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PATH $PYENV_ROOT/bin $PATH
+pyenv init - | source
