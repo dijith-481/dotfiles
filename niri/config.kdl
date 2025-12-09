@@ -64,7 +64,7 @@ output "eDP-1" {
  // position x=0 y=0
 }
 layout {
-    gaps 4
+    gaps 0
     center-focused-column "never"
     always-center-single-column
     default-column-display "tabbed"
@@ -88,7 +88,7 @@ layout {
     }
     // default-column-width {}
     focus-ring {
-        // off
+        off
         width 2
         active-color "#81a1c1"
         inactive-color "#3b4252"
@@ -96,24 +96,24 @@ layout {
     }
     border {
         off
- // width 1
-        // active-color "#81a1c1"
-        // inactive-color "#3b4252"
+        width 2
+        active-color "#81a1c1"
+        inactive-color "#3b4252"
     }
     tab-indicator {
         hide-when-single-tab
-        width 4
-        gap 8
-        length total-proportion=0.25
-        corner-radius 5
+        width 3
+        gap -2
+        length total-proportion=0.999
+        corner-radius 0
         position "left"
-        gaps-between-tabs 4
+        // gaps-between-tabs 128
         active-color "#a3be8c"
-        inactive-color "#a3be8c40"
+        inactive-color "#2e3440"
     }
     shadow {
         // on
-        softness 10
+        softness 0
         spread 0
         offset x=0 y=0
         color "#81a1c2"
@@ -124,10 +124,11 @@ layout {
         gradient from="#5e81acc0" to="#81a1c1d0" angle=45 relative-to="workspace-view"
     }
     struts {
-        left 6
-        right 6
+ // left 1
+        // right 1
  // top 32
         // bottom 64
+
     }
 }
 overview {
@@ -173,9 +174,9 @@ layer-rule {
 layer-rule {
     match namespace="waybar"
     match at-startup=true
-    opacity 0.8
+    // opacity 1
     shadow {
-        on
+        // on
         // off
         softness 40
         spread 5
@@ -310,7 +311,7 @@ window-rule {
     }
 }
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 switch-events {
