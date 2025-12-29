@@ -57,3 +57,7 @@ fish_add_path -g -p ~/development/flutter/bin
 set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PATH $PYENV_ROOT/bin $PATH
 pyenv init - | source
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+set -gx PATH $HOME/.cabal/bin /home/dijith/.ghcup/bin $PATH # ghcup-env
+
